@@ -1,0 +1,26 @@
+@import "../globalStyles/vars";
+@import "../globalStyles/mixins";
+
+.auth{
+
+  label{
+    position: relative;
+
+    &:nth-child(2){
+      margin-bottom: 16px;
+    }
+  }
+
+  .login{
+    background: url("/assets/images/icons/phone.svg") no-repeat 0 center / 24px;
+  }
+
+  .password{
+    background: url("/assets/images/icons/lock.svg") no-repeat 0 center / 24px;
+  }
+
+  .login, .password{
+    padding-left: 40px;
+  }
+
+}

@@ -1,0 +1,36 @@
+@import "../../views/GlobalStyles/vars";
+@import "../../views/GlobalStyles/mixins";
+
+.page-container{
+
+  @include r-min(1200){
+    display: flex;
+  }
+}
+
+.page{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+
+  @include r-min(1201){
+    width: calc(100% - 240px);
+  }
+
+  .page-wrapper{
+    flex-grow: 2;
+    background-color: #EFF1F5;
+    display: flex;
+    flex-direction: column;
+
+    @include r-min(1200){
+      overflow-y: auto;
+    }
+  }
+
+  .order-info {
+    width: 100%;
+
+  }
+}

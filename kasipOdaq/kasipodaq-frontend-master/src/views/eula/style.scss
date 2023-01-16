@@ -1,0 +1,31 @@
+@import "../GlobalStyles/vars";
+@import "../GlobalStyles/mixins";
+
+.eula-page{
+  padding: 0 20px;
+
+  @include r-min(768){
+    padding: 0;
+  }
+
+  .plate-wrapper{
+
+    @include r(768){
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+
+  .title{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  .text{
+    font-size: 14px;
+    line-height: 20px;
+  }
+}

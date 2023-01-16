@@ -1,0 +1,17 @@
+@import "../GlobalStyles/vars";
+@import "../GlobalStyles/mixins";
+
+.requests{
+  margin-top: 16px;
+
+  .question{
+    width: 100%;
+
+    .documents-list{
+
+      li{
+        margin-top: 16px;
+      }
+    }
+  }
+}

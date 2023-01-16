@@ -1,0 +1,13 @@
+@import "../globalStyles/vars";
+@import "../globalStyles/mixins";
+
+.create-ticket{
+
+  label.append-file{
+    cursor: pointer;
+  }
+
+  input[type="file"]{
+    display: none;
+  }
+}

@@ -1,0 +1,43 @@
+@import "../../views/GlobalStyles/vars";
+@import "../../views/GlobalStyles/mixins";
+
+.top-bar{
+  background: $c-main;
+  height: 62px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  flex-shrink: 0;
+  position: relative;
+
+  @include r-min(1200){
+    display: none;
+  }
+
+  .notifications{
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+
+    .mark{
+      width: 5px;
+      height: 5px;
+      border-radius: 100%;
+      position: absolute;
+      top: 2px;
+      right: 0;
+      background: #00AEEF;
+      z-index: 10;
+    }
+  }
+
+  .title{
+
+    @include r-min(768){
+      font-size: 18px;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@import "../GlobalStyles/vars";
+@import "../GlobalStyles/mixins";
+
+.auth{
+
+  label{
+
+    &:nth-child(2){
+      margin-bottom: 29px;
+    }
+  }
+
+  .login{
+    padding-left: 32px;
+  }
+
+  .password{
+    padding-left: 32px;
+  }
+
+  .svg-icons{
+    position: absolute;
+    //bottom: 7px;
+    top: 28px;
+  }
+
+  button{
+    margin-top: 29px;
+  }
+
+  .react-inputs-validation__msg___pxv8o.react-inputs-validation__error___2aXSp {
+    color: #ff5a57;
+    margin-top: 2px;
+    font-size: 12px;
+    padding-left: 4px
+  }
+
+
+}

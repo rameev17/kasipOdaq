@@ -1,0 +1,50 @@
+.notification{
+  width: 280px;
+  font-size: 14px;
+  line-height: 18px;
+  padding: 8px 30px 8px 8px;
+  margin: 24px auto 0 auto;
+
+  &.error__message{
+    border: 1px solid #ED1C24;
+    border-radius: 4px;
+    background: linear-gradient(0deg, rgba(237, 28, 36, 0.2), rgba(237, 28, 36, 0.2)), #FFFFFF;
+    color: #ED1C24;
+    position: relative;
+
+    span{
+      font-weight: bold;
+      display: block;
+    }
+
+    .close-error__message{
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      top: 11px;
+      right: 11px;
+      background: url("/assets/images/icons/error-close.svg") no-repeat center center / contain;
+    }
+  }
+
+  &.warning__message{
+    border-radius: 4px;
+    background: linear-gradient(0deg, rgba(247, 156, 50, 0.2), rgba(247, 156, 50, 0.2)), #FFFFFF;
+    color: #F79C32;
+    border: 1px solid #F79C32;
+    position: relative;
+
+    .close-warning__message{
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      top: 11px;
+      right: 11px;
+      background: url("/assets/images/icons/warning-close.svg") no-repeat center center / contain;
+    }
+  }
+
+  &.hide{
+    display: none;
+  }
+}

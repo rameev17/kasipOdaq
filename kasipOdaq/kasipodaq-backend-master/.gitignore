@@ -1,0 +1,5 @@
+__pycache__
+/union_app/migrations/
+/env
+/.idea
+/yntymaq_union/local_settings.py

@@ -1,0 +1,23 @@
+  .about-project{
+
+    .title-wrapper{
+
+      button{
+        background: none;
+
+        &:hover{
+
+          .btn-action{
+            cursor: pointer;
+            background: #00AEEF;
+            border: 1px solid #00AEEF;
+            color: #fff;
+
+            svg path{
+              stroke: #fff;
+            }
+          }
+        }
+      }
+    }
+  }

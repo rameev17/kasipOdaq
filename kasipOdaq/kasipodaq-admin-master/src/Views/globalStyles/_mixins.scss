@@ -1,0 +1,17 @@
+@mixin r($point) {
+  @media only screen and (max-width: #{$point}px) { @content; }
+}
+
+@mixin r-min($point) {
+  @media only screen and (min-width: #{$point}px) { @content; }
+}
+
+@mixin h-max($point) {
+  @media only screen and (max-height: #{$point}px) { @content; }
+}
+
+@mixin transite($property: all, $duration: .3s, $timing: easy-in){
+  transition-property: $property;
+  transition-duration: $duration;
+  transition-timing-function: $timing;
+}

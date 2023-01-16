@@ -1,0 +1,85 @@
+@import "../../views/GlobalStyles/vars";
+@import "../../views/GlobalStyles/mixins";
+
+.desktop-top-bar {
+  background: $c-main;
+  height: 62px;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  display: none;
+  padding-left: 32px;
+  padding-right: 32px;
+
+  @include r-min(1200) {
+    display: flex;
+  }
+
+  .left-info{
+    display: flex;
+    align-items: center;
+  }
+
+  .notifications {
+    margin-left: 20px;
+
+    .mark {
+      width: 5px;
+      height: 5px;
+      border-radius: 100%;
+      background: #00AEEF;
+    }
+  }
+
+  .nav-buttons {
+    background: $c-main;
+
+    ul {
+      display: flex;
+      justify-content: flex-end;
+
+      li {
+        display: flex;
+        width: 64px;
+        height: 62px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 10px;
+        line-height: 12px;
+
+        @include r-min(768) {
+          margin: 0 23px;
+        }
+
+        a {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          color: #80abcd
+        }
+
+        span {
+          margin-top: 6px;
+          font-size: 11px;
+          line-height: 11px;
+        }
+      }
+
+      .is-active {
+        a {
+          color: #fff;
+        }
+        svg path {
+          fill: #fff;
+        }
+      }
+    }
+  }
+}
+
+.text-uppercase{
+  text-transform: uppercase;
+}
+

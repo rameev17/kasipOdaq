@@ -1,0 +1,428 @@
+@import "../GlobalStyles/vars";
+@import "../GlobalStyles/mixins";
+
+.profile{
+
+  .main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 24px;
+    position: relative;
+
+    @include r(768){
+      margin-bottom: 16px;
+    }
+
+    .img{
+      width: 152px;
+      height: 152px;
+      border-radius: 100%;
+      background: $c-accent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 42px;
+
+      @include r(768){
+        width: 80px;
+        height: 80px;
+      }
+    }
+
+    .name{
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+      color: #2E384D;
+      text-align: center;
+      margin-top: 16px;
+      margin-bottom: 8px;
+
+      @include r-min(768){
+        width: auto;
+        font-size: 24px;
+        line-height: 28px;
+      }
+    }
+
+    .birthday{
+      font-size: 16px;
+      line-height: 24px;
+      color: #B6B6B6;
+
+      @include r-min(768){
+        font-size: 18px;
+        line-height: 26px;
+      }
+    }
+
+    .edit-profile{
+      position: absolute;
+      right: 0;
+
+      &:hover{
+
+        svg path, svg circle{
+          fill: #01579B;
+        }
+      }
+
+      &:active{
+        svg path, svg circle{
+          fill: #00AEEF;
+        }
+      }
+    }
+  }
+
+  .personal{
+
+    .phone{
+      padding-left: 54px;
+      background: url(../../assets/icons/phone.svg) no-repeat 20px center/ 24px;
+    }
+
+    .mail{
+      padding-left: 54px;
+      background: url(../../assets/icons/email.svg) no-repeat 20px center/ 24px;
+    }
+  }
+
+  label{
+    width: 100%;
+    height: 34px;
+    padding-left: 20px;
+    background: #EFF1F5;
+    font-size: 14px;
+    line-height: 18px;
+    color: #979797;
+    display: flex;
+    align-items: center;
+
+    @include r-min(768){
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  .field{
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    line-height: 24px;
+    padding-left: 54px;
+    border-bottom: 1px solid #EFF1F5;
+    padding: 16px 0 16px 20px;
+  }
+
+  .since{
+
+    .date{
+      background: none;
+      color: #000;
+      border-bottom: 0;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.edit-profile{
+
+  .main{
+    position: relative;
+
+    .img__wrapper{
+
+      position: relative;
+      margin: 0 auto 24px auto;
+
+      @include r(768){
+        width: 145px;
+        height: 145px;
+      }
+
+      @include r-min(768){
+        width: 206px;
+        height: 206px;
+      }
+
+      @include r-min(1200){
+        width: 258px;
+        height: 258px;
+      }
+
+      .img{
+        width: 100%;
+        height: 100%;
+        margin: 0 auto 26px auto;
+        overflow: hidden;
+        border-radius: 100%;
+        position: relative;
+        background: $c-accent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 56px;
+
+        @include r-min(1200){
+          width: 258px;
+          height: 258px;
+        }
+      }
+
+      .upload-image-btn{
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #fff;
+        background: #01579B;
+        border-radius: 100%;
+        position: absolute;
+        top: 145px;
+        left: 142px;
+
+        @include r(768){
+          top: 95px;
+          left: 95px;
+        }
+
+        @include r-min(768){
+          top: 150px;
+          left: 150px;
+        }
+
+        @include r-min(1200){
+          width: 50px;
+          height: 50px;
+          top: 190px;
+          left: 190px;
+
+          svg{
+            width: 24px;
+            height: 24px;
+          }
+        }
+
+        &:hover{
+          cursor: pointer;
+        }
+
+        &:active{
+          background: #00AEEF;
+        }
+      }
+    }
+
+
+  }
+
+  .upload-image{
+    width: 100%;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+
+
+
+    .label{
+      width: 100%;
+      height: 34px;
+      display: flex;
+      align-items: center;
+      padding-left: 20px;
+      color: #979797;
+      background: #EFF1F5;
+
+      @include r-min(768){
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+
+    .second_name{
+      margin-bottom: 16px;
+    }
+
+    .field{
+      padding: 0 20px;
+      padding-top: 16px;
+
+      label{
+        font-size: 14px;
+        line-height: 24px;
+        color: #0052A4;
+      }
+
+      input{
+        padding: 0;
+        margin: 0;
+        font-size: 16px;
+        line-height: 24px;
+        padding-right: 25px;
+
+        &:focus{
+          background: url(/assets/images/icons/edit.svg) no-repeat;
+          background-size: 24px;
+          background-position: right center;
+        }
+      }
+
+      .container {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 22px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      /* Hide the browser's default radio button */
+      .container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+
+      /* Create a custom radio button */
+      .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: #eee;
+        border-radius: 50%;
+      }
+
+      /* On mouse-over, add a grey background color */
+      .container:hover input ~ .checkmark {
+        background-color: #ccc;
+      }
+
+      /* When the radio button is checked, add a blue background */
+      .container input:checked ~ .checkmark {
+        background-color: #2196F3;
+      }
+
+      /* Create the indicator (the dot/circle - hidden when not checked) */
+      .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+
+      /* Show the indicator (dot/circle) when checked */
+      .container input:checked ~ .checkmark:after {
+        display: block;
+      }
+
+      /* Style the indicator (dot/circle) */
+      .container .checkmark:after {
+        top: 9px;
+        left: 9px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: white;
+      }
+
+      &.phone, &.email{
+
+        input{
+          background: #fff;
+          color: #545454;
+        }
+      }
+    }
+
+    .btns{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 32px 0;
+
+      button{
+        margin: 0;
+
+        &:nth-child(2){
+          margin-top: 16px;
+        }
+      }
+    }
+  }
+}
+
+.notifications_page{
+  width: 100%;
+
+  .notification__link{
+    display: block;
+    padding: 16px 0;
+    font-size: 14px;
+    line-height: 18px;
+    color: #2E384D;
+    padding-left: 33px;
+    padding-right: 30px;
+    position: relative;
+    border-bottom: 1px solid #E4E8F0;
+
+    &:first-child{
+      padding-top: 0;
+
+      &:before, &:after{
+        top: calc(50% - 8px);
+      }
+    }
+
+    &.is-active{
+      font-weight: 500;
+      &:before{
+        background: url("/assets/images/icons/email-active.svg");
+      }
+    }
+
+    &:before{
+      position: absolute;
+      content: '';
+      display: block;
+      width: 24px;
+      height: 24px;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      background: url("/assets/images/icons/email.svg");
+    }
+
+    &:after{
+      position: absolute;
+      content: '';
+      display: block;
+      width: 24px;
+      height: 24px;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%) rotate(-90deg);
+      background: url("/assets/images/icons/down.svg");
+    }
+  }
+}
+
+.remove-icon{
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}

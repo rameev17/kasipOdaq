@@ -1,0 +1,305 @@
+@import "../GlobalStyles/vars";
+@import "../GlobalStyles/mixins";
+
+.about__project,
+.detailed__information,
+.history{
+  width: 100%;
+
+  .title{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #2E384D;
+    text-align: center;
+    margin: 16px 0;
+  }
+
+  .text{
+    font-size: 14px;
+    line-height: 20px;
+    color: #2E384D;
+
+    @include r-min(768){
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    img{
+      width: 500px;
+
+      @include r(1000){
+        width: 60%;
+      }
+    }
+  }
+}
+
+.about__project{
+
+  .plate-wrapper{
+    margin-top: 0;
+
+    .title{
+      margin-top: 0;
+    }
+  }
+}
+
+.about__federation,
+.branches{
+  width: 100%;
+  margin: 0 auto;
+
+  .logo{
+    text-align: center;
+  }
+
+  .list{
+    margin-top: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #E4E8F0;
+
+    .link__wrapper{
+      border-top: 1px solid #E4E8F0;
+    }
+
+    a{
+      width: 100%;
+      display: block;
+      font-size: 16px;
+      line-height: 24px;
+      color: #2E384D;
+      padding: 16px 32px 16px 0;
+      position: relative;
+      margin: 0 auto;
+
+      &:after{
+        content:'';
+        display: block;
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%) rotate(-90deg);
+        background: url("/assets/images/icons/down.svg");
+      }
+
+      &:hover{
+        color: $c-accent;
+      }
+    }
+  }
+
+  .detailed-information{
+    a{
+      width: 100%;
+      display: block;
+      font-size: 16px;
+      line-height: 24px;
+      text-decoration: underline;
+      color: #01579B;
+      margin-bottom: 32px;
+    }
+  }
+}
+
+.about__federation{
+
+  .list{
+
+    .link__wrapper{
+
+      &:first-child{
+        border-top: 0;
+      }
+    }
+  }
+}
+
+.branches{
+
+  .list{
+    margin-top: 0;
+    height: 72vh;
+  }
+}
+
+.management{
+  width: 100%;
+
+  .title{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #2E384D;
+    text-align: center;
+  }
+
+  .wrapper{
+    display: flex;
+    margin-top: 16px;
+    margin-bottom: 20px;
+
+    @include r-min(768){
+      justify-content: space-between;
+    }
+
+    .photo{
+      height: auto;
+      border: 1px solid #E4E8F0;
+      width: 140px;
+      height: 170px;
+
+      img{
+        display: block;
+
+        @include r(768){
+          width: 109px;
+          height: auto;
+        }
+      }
+    }
+
+    .fio{
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      color: #2E384D;
+      text-transform: uppercase;
+
+      span{
+        margin-right: 7px;
+      }
+    }
+
+    .position,.birthday{
+      font-size: 12px;
+      line-height: 18px;
+      color: #2E384D;
+      margin-bottom: 5px;
+    }
+
+    .management__description{
+      align-self: center;
+      flex: 1;
+      margin-left: 20px;
+    }
+  }
+
+  .management__text{
+    font-size: 14px;
+    line-height: 20px;
+    color: #2E384D;
+    padding-bottom: 16px;
+    margin-bottom: 32px;
+    border-bottom: 1px solid #E4E8F0;
+
+    @include r-min(768){
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}
+
+.activity{
+  width: 100%;
+
+  @include r-min(1200){
+    width: 880px;
+    margin: 0 auto;
+  }
+
+  .download__link{
+    margin-bottom: 16px;
+  }
+}
+
+.charter{
+  width: 100%;
+  color: #2E384D;
+
+  .charter__header{
+    font-size: 14px;
+    line-height: 20px;
+    text-align: right;
+  }
+
+  .title{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    margin: 16px 0;
+  }
+
+  .text{
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.branch{
+  width: 100%;
+  padding: 0 20px;
+
+  .contacts{
+    padding: 0;
+  }
+
+  .title{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #2E384D;
+    margin-top: 24px;
+    margin-bottom: 8px;
+  }
+
+  .text{
+    font-size: 16px;
+    line-height: 24px;
+    color: #2E384D;
+  }
+}
+
+.about{
+  &.plate-wrapper{
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .about__branch{
+    .logo{
+      text-align: center;
+    }
+
+    .description{
+      width: 80%;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 14px;
+      line-height: 20px;
+      color: #2E384D;
+      padding-top: 4px;
+      padding-bottom: 20px;
+
+      @include r-min(768){
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+      }
+    }
+
+    &:after{
+      content: '';
+      display: block;
+      width: 100%;
+      height: 5px;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+  }
+}
+

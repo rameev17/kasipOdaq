@@ -1,0 +1,40 @@
+@import "../globalStyles/vars";
+@import "../globalStyles/mixins";
+
+.articles-list-list{
+
+  .list{
+
+    .title{
+      padding: 16px;
+    }
+
+    .icon{
+      margin: 0;
+    }
+  }
+}
+
+
+.article-edit{
+
+  .checkbox{
+    margin-top: 0;
+  }
+}
+
+.articles-opo{
+
+  .ppos-list{
+    margin-bottom: 0;
+  }
+}
+
+.legal-block{
+  margin-top: 24px;
+}
+
+.legal-wrapper{
+  padding: 32px;
+  border: 1px solid #00AEEF;
+}

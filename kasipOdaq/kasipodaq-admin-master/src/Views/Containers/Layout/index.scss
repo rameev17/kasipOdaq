@@ -1,0 +1,15 @@
+@import "../../globalStyles/vars";
+@import "../../globalStyles/mixins";
+
+.page-wrapper{
+  display: flex;
+  width: 100%;
+
+  >.col-right{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+  }
+}

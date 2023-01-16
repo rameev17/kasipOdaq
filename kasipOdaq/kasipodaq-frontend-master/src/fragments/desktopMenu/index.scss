@@ -1,0 +1,133 @@
+@import "../../views/GlobalStyles/vars";
+@import "../../views/GlobalStyles/mixins";
+
+.desktop-menu{
+  background: $c-main;
+  width: 240px;
+  height: 100vh;
+  overflow-y: auto;
+
+  &>div{
+
+    @include r(1200){
+      width: auto !important;
+    }
+  }
+
+  @include r(1200){
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: $c-main;
+    width: 100vw;
+    overflow-y: auto;
+    transform: translate3d(-100vw,0,0);
+    z-index: 10;
+  }
+
+  @include r-min(1200){
+    display: block;
+  }
+
+  &.is-active{
+    transform: translate3d(0,0,0);
+  }
+
+  @include transite(all);
+
+  .logo{
+    background: #fff;
+    padding: 17px 24px;
+    width: 240px;
+    height: 62px;
+
+    @include r(1200){
+      width: 100%;
+    }
+
+    svg{
+      width: 192px;
+      height: 30px;
+
+      @include r(1200){
+        width: 225px;
+        height: 32px;
+      }
+    }
+  }
+
+  ul.menu{
+    background: $c-main;
+
+    li.is-active{
+
+      a{
+        background: #00aeef;
+      }
+    }
+
+    li.access-denied{
+      a{
+        background: #002F6C;
+      }
+    }
+
+    a{
+      display: flex;
+      align-items: center;
+      padding-left: 18px;
+      height: 58px;
+      border-bottom: 1px solid $c-main;
+      color: #fff;
+      font-size: 16px;
+      line-height: 14px;
+      @include transite(all);
+
+      &:hover{
+        background: $c-accent;
+      }
+
+      .icon{
+        margin-top: 4px;
+        margin-right: 17px;
+      }
+
+      &.request-to-fprk{
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .close-btn{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    display: none;
+
+    @include r(1200){
+      display: block;
+    }
+  }
+}
+
+.language-link{
+  display: flex;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+
+  p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid #E4E8F0;
+
+    &:hover{
+      background-color: $c-accent;
+    }
+  }
+}

@@ -1,0 +1,123 @@
+@import "../globalStyles/vars";
+@import "../globalStyles/mixins";
+
+.direction-list, .about-menu{
+
+  li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    position: relative;
+    margin-bottom: 16px;
+
+    &:last-child{
+      margin: 0;
+    }
+
+    a{
+      width: 100%;
+      font-size: 16px;
+      line-height: 24px;
+      color: #2E384D;
+      padding: 16px;
+      border: 1px solid #E4E8F0;
+      border-radius: 4px;
+      background: url("../../assets/icons/arrow.svg") no-repeat center center;
+      background-position: right 12px center;
+    }
+  }
+}
+
+.dispute-info{
+
+  .data{
+    font-size: 16px;
+    line-height: 24px;
+    color: #2E384D;
+  }
+
+  .subtitle-wrapper{
+    justify-content: space-between;
+    margin: 24px 0;
+
+    button{
+      background: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .btn-action{
+
+        &:hover{
+          svg path{
+            stroke: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+.discussion-direction{
+
+  .list{
+    tr{
+
+      &.new{
+        .subject,
+        .opened,
+        .status{
+          font-weight: bold;
+          color: #2E384D !important;
+        }
+      }
+
+      .date{
+        font-size: 16px;
+        line-height: 24px;
+
+        .opened{
+          color: #BFC5D2;
+        }
+      }
+
+      .btn-action{
+
+        .icon{
+          margin: 0;
+        }
+      }
+
+      .remove{
+        .btn-action{
+          display: inline-flex;
+        }
+      }
+    }
+  }
+}
+
+
+.council-edit{
+  margin-top: 24px;
+  input{
+
+    &:focus{
+      border: 1px solid #E4E8F0;
+    }
+  }
+}
+
+.dispute-category{
+  border-bottom: 1px solid #E4E8F0;
+
+  a{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #2E384D;
+    padding: 16px 0;
+  }
+
+}

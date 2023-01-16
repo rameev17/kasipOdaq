@@ -1,0 +1,92 @@
+@import "../GlobalStyles/vars";
+@import "../GlobalStyles/mixins";
+
+.step-registration{
+
+  .direction{
+    width: 100%;
+    height: 44px;
+    border: 1px solid #E4E8F0;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #9A9B9C;
+    appearance: none;
+    padding: 10px 8px;
+    background: url("#") no-repeat right 10px / contain;
+    background-size: 24px;
+
+    &:active{
+      border: 1px solid #00AEEF;
+      background-image: url("#");
+    }
+  }
+}
+
+.step-order{
+
+  .download__link{
+    margin-bottom: 16px;
+  }
+
+  .info {
+    margin-top: 0;
+    .text {
+      a {
+        font-size: 16px;
+        line-height: 24px;
+        text-decoration-line: underline;
+        color: #01579B;
+      }
+    }
+  }
+}
+
+.step-order-append{
+
+  .info{
+    margin-top: 0;
+  }
+
+  label{
+    cursor: pointer;
+    margin-top: 16px;
+
+    .icon{
+      display: none;
+    }
+  }
+
+  input[type="file"]{
+    display: none;
+  }
+}
+
+.placeList{
+  height: calc(100% - 120px);
+  background-color: #fff;
+  margin: 24px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.24);
+  border-radius: 8px;
+  overflow-y: scroll;
+
+  ul{
+    padding: 16px;
+
+    li{
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 24px;
+      color: #2E384D;
+      padding: 16px;
+      border-bottom: 1px solid #E4E8F0;
+      cursor: pointer;
+
+      &:hover{
+        background-color: #EFF1F5;
+      }
+    }
+
+  }
+}

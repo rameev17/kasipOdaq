@@ -1,0 +1,26 @@
+@import "../GlobalStyles/vars";
+@import "../GlobalStyles/mixins";
+
+.support{
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+
+  @include r-min(768){
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 16px;
+  }
+
+  button {
+    margin: 30px auto;
+    display: block;
+    background: #01579b;
+    color: #fff;
+
+    @include r(1200){
+      margin-bottom: 100px;
+    }
+  }
+}
+

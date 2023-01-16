@@ -1,0 +1,48 @@
+@import "../GlobalStyles/mixins";
+
+.congress,
+.council,
+.executive__committee,
+.commission {
+  width: 100%;
+
+  .title{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #2E384D;
+    margin-bottom: 16px;
+  }
+
+  .text{
+    font-size: 14px;
+    line-height: 20px;
+    color: #2E384D;
+
+    @include r-min(768){
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}
+
+.council,
+.executive__committee,
+.commission {
+
+  .download__link{
+    padding: 12px 20px;
+    height: auto;
+    line-height: 16px;
+
+    @include r-min(768){
+      width: 880px;
+      margin: 0 auto;
+    }
+  }
+
+  .title{
+    margin: 16px 0;
+  }
+}

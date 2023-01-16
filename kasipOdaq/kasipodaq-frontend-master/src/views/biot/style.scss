@@ -1,0 +1,121 @@
+@import "../GlobalStyles/vars";
+@import "../GlobalStyles/mixins";
+
+.work{
+  width: 100%;
+  margin: 0 auto;
+
+
+  .title{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #2E384D;
+    margin-top: 24px;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+
+  .text{
+    font-size: 16px;
+    line-height: 24px;
+    color: #2E384D;
+  }
+
+  .orders-wrapper{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #E4E8F0;
+    border-radius: 4px;
+
+    &.active{
+      border: 1px solid #00AEEF;
+
+      .icon{
+        background: url("/assets/images/icons/down-active.svg") no-repeat center center !important;
+      }
+    }
+
+    .trigger{
+      color: #2E384D;
+      position: relative;
+      padding: 10px 12px;
+
+      .icon{
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        background: url("/assets/images/icons/down.svg") no-repeat center center;
+        transform: rotate(-90deg);
+        top: 8px;
+        right: 8px;
+      }
+    }
+    .orders{
+      display: block;
+      width: 100%;
+      height: 100%;
+
+      .download__link{
+        width: 95%;
+        margin: 0 auto 15px auto;
+      }
+    }
+  }
+}
+
+.council{
+  width: 280px;
+  margin: 0 auto;
+
+  .video{
+    margin: 0 auto;
+
+    @include r-min(768){
+      width: 768px;
+      height: 500px;
+    }
+
+    iframe{
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .title{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #2E384D;
+    margin-top: 24px;
+    margin-bottom: 16px;
+  }
+
+  .text{
+    margin-bottom: 16px;
+
+    .part{
+      iframe{
+        width: 100%;
+        height: 100%;
+
+        @include r-min(768){
+          width: 768px;
+          height: 500px;
+        }
+
+      }
+    }
+  }
+
+  .signature{
+
+    .names{
+      margin-top: 8px;
+      margin-bottom: 32px;
+    }
+  }
+}

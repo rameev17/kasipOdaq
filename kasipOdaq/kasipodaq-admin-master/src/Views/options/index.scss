@@ -1,0 +1,105 @@
+@import "../globalStyles/vars";
+@import "../globalStyles/mixins";
+
+.options{
+
+  .panel{
+    padding: 0;
+  }
+
+  ul{
+
+    li{
+      display: flex;
+      height: 100%;
+      align-items: center;
+      border-bottom: 1px solid #E4E8F0;
+      padding: 18px 20px;
+      cursor: pointer;
+
+      &:last-child{
+        border-bottom: 0;
+      }
+
+      &.language{
+        flex-direction: row;
+        align-items: center;
+      }
+
+      &.notifications{
+        padding: 0;
+
+        label{
+          display: flex;
+          align-items: center;
+          padding: 18px 20px;
+          width: 100%;
+          position: relative;
+          cursor: pointer;
+
+          input{
+            display: none;
+          }
+
+          input:checked ~ .checkbox{
+
+            &:before{
+              background: $c-main;
+            }
+
+            &:after{
+              transform: translate3d(17px,-50%,0);
+            }
+          }
+
+          .checkbox{
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            width: 34px;
+            height: 14px;
+            margin-top: 0;
+
+            &:before{
+              content: '';
+              display: block;
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              border-radius: 7px;
+              background: rgba(34, 31, 31, 0.26);
+
+              @include transite(all);
+            }
+
+            &:after{
+              content: '';
+              display: block;
+              border-radius: 100%;
+              width: 20px;
+              height: 20px;
+              position: absolute;
+              top: 50%;
+              left: 0;
+              transform: translate3d(-3px,-50%,0);
+              background: #F1F1F1;
+              box-shadow: 0 2px 2px rgba(0, 0, 0, 0.24), 0 0 2px rgba(0, 0, 0, 0.12);
+
+              @include transite(all);
+            }
+          }
+        }
+      }
+
+      .icon{
+        margin-right: 17px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}

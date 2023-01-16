@@ -1,0 +1,35 @@
+@import "../GlobalStyles/vars";
+@import "../GlobalStyles/mixins";
+
+.create-ticket{
+
+  label.append-file{
+    cursor: pointer;
+
+    &.is-attached{
+      position: relative;
+      border: 1px solid #00AEEF;
+      background: none;
+
+      .icon{
+
+        svg path{
+          stroke: #00AEEF;
+        }
+      }
+    }
+  }
+
+  input[type="file"]{
+    display: none;
+  }
+}
+
+.form-send__request{
+  margin: 0;
+  padding: 0;
+
+  button{
+    width: 368px;
+  }
+}

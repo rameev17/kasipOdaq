@@ -1,0 +1,68 @@
+@import "../GlobalStyles/vars";
+@import "../GlobalStyles/mixins";
+
+.help{
+  .question{
+    width: 100%;
+  }
+}
+
+.faq{
+  width: 100%;
+
+  .question-item{
+    border-top: 1px solid #E4E8F0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    &:hover{
+      cursor: pointer;
+    }
+
+    &:first-child{
+      border-top: 0;
+
+      .question{
+        margin-top: 0;
+
+        .icon{
+          top: 0;
+        }
+      }
+    }
+
+    &:last-child{
+      border-bottom: 1px solid #E4E8F0;
+    }
+
+    .question{
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      color: #2E384D;
+      margin: 24px 0;
+      padding-right: 30px;
+    }
+
+    .answer{
+      font-size: 16px;
+      line-height: 24px;
+      color: #2E384D;
+      margin-bottom: 24px;
+    }
+
+    .icon{
+      position: absolute;
+      top: 24px;
+      right: 0;
+      width: 24px;
+      height: 24px;
+      @include transite(all);
+
+      &.is-active{
+        transform: rotate(45deg);
+      }
+    }
+  }
+}

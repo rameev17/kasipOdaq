@@ -1,0 +1,71 @@
+@import "../../Views/globalStyles/vars";
+@import "../../Views/globalStyles/mixins";
+
+.search{
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 4px 8px rgba(191, 197, 210, 0.5);
+  border-radius: 8px;
+  align-items: center;
+  padding: 4px 8px 4px 8px;
+
+  .search__input{
+    display: flex;
+    flex: 1;
+
+    .icon{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    input{
+      flex: 1;
+    }
+
+    .text{
+      flex: 1;
+    }
+  }
+
+  .paging-wrapper{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+
+    .pages{
+      font-size: 16px;
+      line-height: 19px;
+      color: #9A9B9C;
+      margin: 0 24px;
+    }
+
+    .arrows{
+      display: flex;
+      border-radius: 4px;
+      border: 1px solid #E4E8F0;
+
+      .arrow{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include transite(all);
+
+        &.prev{
+          transform: rotate(180deg);
+          border-left: 1px solid #E4E8F0;
+        }
+
+        &:hover{
+          cursor: pointer;
+          background-color: #00AEEF;
+
+          path{
+            stroke: #fff;
+          }
+        }
+      }
+    }
+  }
+
+}

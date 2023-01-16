@@ -1,0 +1,57 @@
+@import "../../views/GlobalStyles/vars";
+@import "../../views/GlobalStyles/mixins";
+
+.bottom-bar{
+  background: $c-main;
+  flex-shrink: 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+  @include r-min(1200){
+    display: none;
+  }
+
+  ul{
+    display: flex;
+    justify-content: center;
+
+    li{
+      display: flex;
+      width: 64px;
+      height: 62px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      line-height: 12px;
+
+      @include r-min(768){
+        margin: 0 23px;
+      }
+
+      a{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color:#80abcd
+      }
+      
+      span{
+        margin-top: 6px;
+        font-size: 11px;
+        white-space: nowrap;
+      }
+    }
+
+    .is-active{
+      a{
+        color: #fff;
+      }
+      svg path{
+        fill: #fff;
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@import "../../GlobalStyles/vars";
+@import "../../GlobalStyles/mixins";
+
+.bread-crumbs{
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+
+  @include r(768){
+    display: none;
+  }
+
+  a{
+    color:  #01579B;;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  svg {
+    width: 16px;
+    height: 16px;
+    margin: 0 4px;
+
+    path{
+      stroke:#01579B;
+    }
+  }
+}
+
+.bread-crumbs__ml{
+  margin-left: 16px;
+}
